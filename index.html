@@ -312,6 +312,12 @@ header:active {
 .burger[aria-expanded="true"] .burger__line:nth-child(1) { transform: translateY(5.25px) rotate(45deg); }
 .burger[aria-expanded="true"] .burger__line:nth-child(2) { transform: translateY(-5.25px) rotate(-45deg); }
 
+.burger:focus, 
+.burger:active { 
+  outline: none; 
+  background: transparent; 
+}
+
 .sheet {
   position: fixed; inset: calc(var(--bar-h) + env(safe-area-inset-top)) 0 auto 0; z-index: 55;
   background: var(--bar);
@@ -335,7 +341,7 @@ header:active {
   transition: opacity var(--fast) var(--ease);
 }
 .sheet__list li:last-child .sheet__link { border-bottom: 0; }
-.sheet__link:active { opacity: 0.5; text-decoration: none; }
+.sheet__link:active { text-decoration: none; }
 .sheet__link:hover { text-decoration: none; }
 
 .scrim {
@@ -830,13 +836,13 @@ const CONTENT = {
       sub: "Nemakonde High School",
       meta: "2016 to 2018",
       tag: "HigherLife Foundation Scholar",
-      note: "25 points at A Level. Eight A grades and three B grades at O Level.",
+      note: "25 points at Advanced Level.",
       items: [
-        "Further Mathematics",
-        "Pure Mathematics",
-        "Physics",
-        "Chemistry",
-        "Statistics"
+        "Further Mathematics, A",
+        "Pure Mathematics, A",
+        "Physics, A",
+        "Chemistry, A",
+        "Statistics, A"
       ]
     }
   ],
@@ -869,7 +875,7 @@ const CONTENT = {
       name: "UbuntuGrid",
       desc: "A microgrid venture structured so villages own the asset rather than rent it. Covers sizing, tariff design and the operating model behind each site.",
       tech: "Solar PV design, energy economics, community governance",
-      url: "https://ubuntugrid.com"
+      url: "404.html"
     },
     {
       name: "Advanced Security System for High Value Assets",
