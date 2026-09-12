@@ -26,7 +26,7 @@
   "name": "Asher Chakupa",
   "jobTitle": "Electrical engineer",
   "description": "Electrical engineer working on energy access. Founder of UbuntuGrid, a community-owned solar microgrid venture in rural Zimbabwe.",
-  "url": "https://ubuntugrid.com/",
+  "url": "404.html",
   "alumniOf": "Ashesi University",
   "worksFor": { "@type": "Organization", "name": "UbuntuGrid" }
 }
@@ -287,7 +287,7 @@ header:active {
   color: var(--text); text-decoration: none; white-space: nowrap;
   transition: background-color var(--fast) var(--ease), border-color var(--fast) var(--ease);
 }
-.cv:hover { background: var(--surface-hover); border-color: var(--hairline); text-decoration: none; }
+//.cv:hover { background: var(--surface-hover); border-color: var(--hairline); text-decoration: none; }
 .cv:active { background: var(--surface-hover); }
 
 .nav { display: none; }
@@ -297,7 +297,7 @@ header:active {
   font-size: 0.9375rem; color: var(--text-2); text-decoration: none;
   transition: color var(--fast) var(--ease), background-color var(--fast) var(--ease);
 }
-.nav__link:hover { color: var(--text); background: var(--surface-hover); text-decoration: none; }
+// .nav__link:hover { color: var(--text); background: var(--surface-hover); text-decoration: none; }
 .nav__link[aria-current="true"] { color: var(--text); }
 
 .burger {
@@ -620,6 +620,10 @@ header:active {
   }
   .reveal, .enter { opacity: 1 !important; transform: none !important; }
 }
+
+@media (hover: hover) and (pointer: fine) {
+.nav__link:hover { color: var(--text); background: var(--surface-hover); text-decoration: none; }
+.cv:hover { background: var(--surface-hover); border-color: var(--hairline); text-decoration: none; }
 </style>
 </head>
 
