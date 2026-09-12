@@ -1,0 +1,12 @@
+{
+  "name": "Asher Chakupa",
+  "short_name": "Asher",
+  "description": "Electrical engineer building community-owned solar microgrids in rural Zimbabwe.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FBFBFD",
+  "theme_color": "#FBFBFD",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

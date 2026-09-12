@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Page not found — Asher Chakupa</title>
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#FBFBFD" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<style>
+:root {
+  --bg: #FBFBFD; --text: #14141A; --text-2: #5F5F68; --hairline: rgba(20,20,26,.10);
+  --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #000; --text: #F2F2F5; --text-2: #A0A0A8; --hairline: rgba(255,255,255,.12); }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; min-height: 100svh;
+  display: grid; place-items: center;
+  padding: 24px;
+  background: var(--bg); color: var(--text);
+  font-family: var(--font); letter-spacing: -0.011em;
+  -webkit-font-smoothing: antialiased;
+}
+main { max-width: 28rem; }
+h1 { margin: 0; font-size: clamp(2rem, 8vw, 2.75rem); font-weight: 600; letter-spacing: -0.035em; }
+p { margin: 16px 0 28px; color: var(--text-2); line-height: 1.55; }
+a {
+  display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px;
+  border: 1px solid var(--hairline); border-radius: 14px;
+  color: var(--text); text-decoration: none; font-weight: 500;
+  transition: background-color 160ms cubic-bezier(.32,.72,0,1);
+}
+a:hover { background: color-mix(in srgb, var(--text) 5%, transparent); }
+a:focus-visible { outline: 2px solid var(--text); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { * { transition-duration: 0.001ms !important; } }
+</style>
+</head>
+<body>
+<main>
+  <h1>Page not found</h1>
+  <p>The page you asked for does not exist, or the address has changed.</p>
+  <a href="/">Back to the start</a>
+</main>
+</body>
+</html>
