@@ -617,8 +617,15 @@ header:active {
 }
 
 @media (hover: hover) and (pointer: fine) {
-.nav__link:hover { color: var(--text); background: var(--surface-hover); text-decoration: none; }
-.cv:hover { background: var(--surface-hover); border-color: var(--hairline); text-decoration: none; }
+  a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .nav__link:hover { color: var(--text); background: transparent; text-decoration: none; }
+  .cv:hover { background: transparent; border-color: var(--hairline); text-decoration: none; }
+  .social:hover { color: var(--text); background: transparent; text-decoration: none; }
+}
+
 </style>
 </head>
 
