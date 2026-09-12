@@ -424,7 +424,9 @@ button { font: inherit; color: inherit; background: none; border: 0; }
   text-align: left; cursor: pointer;
   transition: background-color var(--fast) var(--ease);
 }
-.row__btn:hover { background: var(--surface-hover); }
+@media (hover: hover) and (pointer: fine) {
+  .row__btn:hover { background: var(--surface-hover); }
+}
 .row__award { margin-top: var(--s2); font-size: var(--t-micro); color: var(--text-3); }
 .row--toggle .chev { transition: transform var(--mid) var(--ease); }
 .row--toggle[data-open="true"] .chev { transform: rotate(90deg); }
