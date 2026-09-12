@@ -956,7 +956,7 @@ const CONTENT = {
         "Local Hub Ambassador, beVisioneers: The Mercedes-Benz Fellowship, 2025 to now",
         "Alumnus, Aspire Leaders Program, Aspire Institute, 2024",
         "Co-founder and President, Ashesi Pickleball Association, 2024",
-        "Vice President, Ashesi Wiki Club with Open Foundation West Africa, 2022 to 2023",
+        "VP, Ashesi Wiki Club with Open Foundation West Africa, 2022 to 2023",
         "Deputy Head of Investment, Ashesi Business Club, 2021 to 2023",
         "Vice President, Ashesi International Students Association, 2021 to 2022",
         "Member of Parliament, Ashesi Students Council, 2021 to 2022",
@@ -968,7 +968,7 @@ const CONTENT = {
       meta: "2023 to 2024",
       items: [
         "STEM tutor, Good Shepherd Orphanage, Chinhoyi, 2024",
-        "Tutor in calculus and English for Nigerien students, Ashesi University, 2023 to 2024",
+        "Calculus & English tutor @ Ashesi University, 2023 to 2024",
         "Türkiye-Syria earthquake solidarity mapathon, Ashesi Wiki Club, 2023"
       ]
     }
@@ -1108,6 +1108,7 @@ function skillRow(x, n) {
   </li>`;
 }
 
+/*  
 function initDisclosures() {
   ["expList", "eduList", "skillList", "projList", "recList"].forEach(id => {
     el(id).addEventListener("click", (e) => {
@@ -1120,6 +1121,36 @@ function initDisclosures() {
     });
   });
 }
+*/
+  
+function initDisclosures() {
+  ["expList", "eduList", "skillList", "projList", "recList"].forEach(id => {
+    const listEl = el(id);
+    if (listEl) {
+      listEl.addEventListener("click", (e) => {
+        const btn = e.target.closest(".row__btn");
+        if (!btn) return;
+        const row = btn.closest(".row--toggle");
+        const open = row.dataset.open !== "true";
+        row.dataset.open = String(open);
+        btn.setAttribute("aria-expanded", String(open));
+      });
+    }
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".row--toggle")) {
+      document.querySelectorAll('.row--toggle[data-open="true"]').forEach(row => {
+        row.dataset.open = "false";
+        const btn = row.querySelector(".row__btn");
+        if (btn) btn.setAttribute("aria-expanded", "false");
+      });
+    }
+  });
+}
+
+
+
 
 function renderLists() {
   el("expList").innerHTML   = CONTENT.experience.map((x, n) => experienceRow(x, n)).join("");
